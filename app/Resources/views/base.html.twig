@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>{% block title %}Aplicacion para la gestion de Prestamos{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+        <header>
+            <div>
+                {% block header %}{% endblock %}
+            </div>
+        </header>
+    <div>
+        {% block body %}{% endblock %}
+        <footer>
+            {% block footer %}
+                <a href="#">&copy; {{ 'now' | date('Y') }} - Gestion de Prestamos</a>
+                <a href="#"> Privacidad</a>
+                <a href="#"> Condiciones de uso</a>
+            {% endblock %}
+        </footer>
+     </div>
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>
