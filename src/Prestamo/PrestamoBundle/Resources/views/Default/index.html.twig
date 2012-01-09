@@ -1,0 +1,36 @@
+{% extends "PrestamoBundle::layout.html.twig" %}
+{%  block body %}
+<div>
+      <table>
+          <thead>
+              <tr>
+                  <th>Nacionalidad</th>
+                  <th>Cedula</th>
+                  <th>Nombre</th>
+                  <th>Apellidos</th>
+                  <th>Direccion</th>
+                  <th>Telefono</th>
+                  <th>Accion</th>
+              </tr>
+          </thead>
+          <tbody>
+              {% for persona in personas %}
+              <tr>
+                  <td>{{ persona.nacionalidad }}</td>
+                  <td>{{ persona.cedula }}</td>
+                  <td>{{ persona.nombre }}</td>
+                  <td>{{ persona.apellidos }}</td>
+                  <td>{{ persona.direccion }}</td>
+                  <td>{{ persona.Telefono }}</td>
+                  <td><a href="{{ path('prestamo_id', {'persona_id':persona.id})}}">Ver Prestamos</a></td>
+              </tr>
+               {% else %}
+              <tr>
+                <td colspan="4">No existe Ninguna persona</td>
+              </tr>
+              {% endfor %}
+          </tbody>
+      </table>
+
+   </div>
+{% endblock %}

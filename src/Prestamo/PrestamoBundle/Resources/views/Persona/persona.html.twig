@@ -1,0 +1,31 @@
+{% extends "PrestamoBundle::layout.html.twig" %}
+{%  block body %}
+<div>
+      <table>
+          <thead>
+              <tr>
+                  <th>Nacionalidad</th>
+                  <th>Cedula</th>
+                  <th>Nombre</th>
+                  <th>Apellidos</th>
+                  <th>Direccion</th>
+                  <th>Telefono</th>
+              </tr>
+          </thead>
+          <tbody>
+
+              <tr>
+                  <td>{{ persona.nacionalidad }}</td>
+                  <td>{{ persona.cedula }}</td>
+                  <td>{{ persona.nombre }}</td>
+                  <td>{{ persona.apellidos }}</td>
+                  <td>{{ persona.direccion }}</td>
+                  <td>{{ persona.Telefono }}</td>
+              </tr>
+
+          </tbody>
+      </table>
+
+   </div>
+
+{% endblock %}

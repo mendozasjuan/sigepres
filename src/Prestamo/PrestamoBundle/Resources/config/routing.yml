@@ -1,0 +1,24 @@
+portada:
+    pattern:  /
+    defaults: { _controller: PrestamoBundle:Default:index }
+
+prestamo:
+    pattern: /prestamo
+    defaults: { _controller: PrestamoBundle:Prestamo:index}
+
+prestamo_id:
+    pattern: /prestamo/{persona_id}
+    defaults: { _controller: PrestamoBundle:Prestamo:prestamo}
+
+prestamo_new:
+    pattern: /newprestamo
+    defaults: { _controller: PrestamoBundle:Prestamo:new}
+
+persona:
+    pattern: /persona
+    defaults: { _controller: PrestamoBundle:Persona:index}
+
+#persona_id:
+ #   pattern:  /persona/{id}
+  #  defaults: { _controller: PrestamoBundle:Persona:persona }
+

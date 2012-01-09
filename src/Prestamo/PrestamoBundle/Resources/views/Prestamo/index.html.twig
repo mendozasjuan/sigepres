@@ -1,0 +1,31 @@
+{% extends "PrestamoBundle::layout.html.twig" %}
+{%  block body %}
+  <div>
+      <table>
+          <thead>
+              <tr>
+                  <th>Cantidad</th>
+                  <th>Fecha</th>
+                  <th>Porcentaje</th>
+                  <th>Cancelo</th>
+              </tr>
+          </thead>
+          <tbody>
+              {% for prestamos in prestamo %}
+              <tr>
+                  <td>{{ prestamos.cantidad }}</td>
+                  <td>{{ prestamos.fecha | date("d M") }}</td>
+                  <td>{{ prestamos.porcentaje }}</td>
+                  <td>{{ prestamos.cancelo }}</td>
+              </tr>
+               {% else %}
+              <tr>
+                <td colspan="4">No existe Ningun prestamo</td>
+              </tr>
+              {% endfor %}
+          </tbody>
+      </table>
+
+   </div>
+{% endblock %}
+

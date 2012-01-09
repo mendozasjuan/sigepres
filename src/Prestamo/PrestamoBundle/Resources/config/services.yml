@@ -1,0 +1,7 @@
+parameters:
+#    prestamo.example.class: Prestamo\PrestamoBundle\Example
+
+services:
+#    prestamo.example:
+#        class: %prestamo.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
